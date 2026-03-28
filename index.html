@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IssueGuard - Secret Scanner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ IssueGuard Scanner</h1>
+            <p>Paste your code or text below to detect sensitive information (API keys, Aadhar, PAN, etc.)</p>
+        </header>
+
+        <main>
+            <div class="editor-section">
+                <textarea id="text-input" placeholder="Paste your text or code here..."></textarea>
+                <div class="actions">
+                    <button id="scan-btn">Scan for Secrets</button>
+                    <button id="clear-btn" class="secondary">Clear</button>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <h2>Scan Results</h2>
+                <div id="results-container">
+                    <p class="empty-state">No secrets detected yet.</p>
+                </div>
+            </div>
+
+            <div class="redaction-section">
+                <h2>Redacted Output</h2>
+                <textarea id="text-output" readonly placeholder="Redacted text will appear here..."></textarea>
+            </div>
+        </main>
+    </div>
+
+    <script src="src/matcher.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

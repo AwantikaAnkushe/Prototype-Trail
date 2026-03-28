@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IssueGuard</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; width: 300px; margin: 0; padding: 15px; background-color: #f7f9fc; color: #333; }
+    h2 { margin-top: 0; font-size: 18px; color: #1a1a1a; display: flex; align-items: center; gap: 8px; }
+    .status { padding: 10px; border-radius: 6px; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 15px; }
+    .stat { display: flex; justify-content: space-between; margin: 5px 0; font-size: 14px; }
+    .stat span.bold { font-weight: bold; color: #d32f2f; }
+    .toggle { display: flex; align-items: center; justify-content: space-between; }
+    button { background: #007bff; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; transition: background 0.2s; }
+    button:hover { background: #0056b3; }
+    button.disabled { background: #6c757d; }
+  </style>
+</head>
+<body>
+  <h2>🛡️ IssueGuard</h2>
+  <div class="status">
+    <div class="stat">Secrets Blocked: <span class="bold" id="blocked-count">0</span></div>
+  </div>
+  <div class="toggle">
+    <button id="toggle-btn">Disable Protection</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
