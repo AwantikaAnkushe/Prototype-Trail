@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "IssueGuard - LLM Data Leakage Preventer",
+    "name": "LeakShield - LLM Data Leakage Preventer",
     "version": "1.0",
     "description": "Prevents sensitive data from being sent to LLMs at the browser level.",
     "permissions": [
